@@ -1,0 +1,4 @@
+init{
+    0 L,p1,R init
+    1 R,p0,L init
+}

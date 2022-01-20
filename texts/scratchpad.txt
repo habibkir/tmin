@@ -1,0 +1,41 @@
+leggi
+
+piccola idea fai un first pass in cui conti quante m_config ci sono e quante righe hanno in modo da poter mettere tutto bello statico
+magari poi assegni un id a ogni m_conf che trovi per facilitare il passaggio da una m-config all'altra
+
+costruzione modello macchina
+
+first_pass
+fase un po' piu molle, ho una lista concatenata di
+struct m_config_info{
+    int ID; //init ha ID = 0, tutto il resto ha ID che vanno da 1 a boh
+
+    std::string name;//chiave di una map per associare poi il nome all'id quando sto facendo il modello
+    
+    int/size_t/boh rows_count;//per fare l'array dopo
+}
+
+come faccio sta cosa?
+
+una ifsteram globale
+
+la funzione fai_il_parse_di_tutto_sto_bordello:
+    scende fino a trovare una linea non vuota che non commentum est (facciamo che i commenti iniziano con //)
+    chiama get_m_config_info
+
+la funzione get_m_config_info:
+    prende il nome e l'ID
+    associa il nome della m_config a un ID
+    trova quante righe ha
+    rida il controllo a fai_il_parse_di_tutto_sto_bordello
+
+poi al secondo passo
+costruisco tutte le m_config e le metto al posto giusto nell vettorone
+
+per costruire le m_config faccio che costruisco solo un vettore di righe
+chiamo parse_riga per ogni riga;
+aggiungo la riga al coso;
+
+//poi magari metto gli affari in modo ordinato nella riga in modo da poter fare ricerca binaria
+
+//poi magari dai un occhiata a come puoi fare per il preporcessing per fare le subroutine

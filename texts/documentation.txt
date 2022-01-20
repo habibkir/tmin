@@ -1,0 +1,64 @@
+Turing machine instruction notation
+un linguaggio di programmazione fatto alla cazzo di cane per simulare una macchina di Turing
+inizia a m-config init (da parametrizzare dopo)
+
+
+Capitolo 1, come diciaro sta roba
+
+m-config dichiarata nel seguente modo
+
+<nome> {
+    <riga>
+    <riga>
+    <riga>
+    quante cazzo di righe vuoi
+}
+
+nome: nome della configurazione
+riga: una riga dichiarata come segue
+
+
+riga dichiarata nel seguente modo
+
+<simbolo> <azioni> <m-config successiva>
+
+simbolo: carattere ascii (da esterndere a wchar_t e/o unicode)
+azioni: L,R, o P<simbolo>
+m-config successiva: il nome di un'altra m-config
+
+
+Capitolo 2, come implemento sta roba
+
+invece di interpretare andando nel testo e facendo parsing ogni volta torna piu' conveniente creare un modello interno della macchina e usare quello
+questa cosa salta da una parte all'altra come pinocchio in calore e non sono abbastanza bravo con le file stream per fare sta cosa decentemente
+
+nell'idea corrente che ho di sta roba:
+
+la m-config deve saper
+1.trovare la riga corrispondente al carattere nella cella di testa
+2.essere raggiungibile facilmente tramite il suo nome 
+
+la prima la implemento secondo una di ste due
+1-un vettore lungo quanto le righe della macchina e ogni elemento del vettore e' uno struct riga (occupa meno memoria)
+2-lista concatenata di struct riga che costruisco andando avanti (forse piu' facile da implementare?)
+
+al momento vado con la 2, poi si trovi un modo per andare alla 1 che sta cosa voglio rifarla in calore
+
+la seconda cosa la implemento con una unrdered_map<std::string,m_config>
+
+
+la riga deve saper
+1-dire se il carattere coincide
+2-eseguire le azioni
+3-saper dare la stringa per andare alla m-conf successiva/ andare alla m-conf successiva
+
+sticazzi faccio
+struct riga{
+    char chiave;//trova un nome migliore
+    std::string azioni;
+    std::string m_conf_successiva;
+    oppure
+    m_config* m_conf_successiva;//meglio questa
+}
+
+neanche troppi problemi
