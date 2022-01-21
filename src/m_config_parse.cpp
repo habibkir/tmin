@@ -1,21 +1,11 @@
-#include<iostream>
-#include<string>
-#include<fstream>
-#include<list>
-
-#include"machine_components.h"
-
-#ifndef TMIN_M_CONFIG_PARSE
-#define TMIN_M_CONFIG_PARSE
-
-struct m_config_info{
+class m_config_info{
     int id;
     std::string name;
     int rows_count;
 };
 
-std::list<m_config_info> first_step(const char* filepath){
-    std::list<m_config_info>ret;
+std::vector<m_config_info> first_step(const char* filepath){
+    std::vector<m_config_info>ret;
     std::ifstream ifs(filepath);
     std::string line;
 
@@ -31,4 +21,3 @@ std::list<m_config_info> first_step(const char* filepath){
     return ret;
 }
 
-#endif

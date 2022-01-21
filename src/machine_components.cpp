@@ -4,7 +4,7 @@ struct m_config;
 
 struct row{
     char symbol;
-    std::string operations;
+    char* operations;
     m_config* final_m_config;
 };
 

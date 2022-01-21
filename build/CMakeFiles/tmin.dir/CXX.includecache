@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/virbonus/projects/tmin/src/line_parse.cpp
+line_parse.h
+/home/virbonus/projects/tmin/src/line_parse.h
+
+/home/virbonus/projects/tmin/src/line_parse.h
+
+/home/virbonus/projects/tmin/src/m_config_parse.cpp
+
+/home/virbonus/projects/tmin/src/m_config_parse.h
+iostream
+-
+string
+-
+fstream
+-
+list
+-
+machine_components.h
+/home/virbonus/projects/tmin/src/machine_components.h
+
+/home/virbonus/projects/tmin/src/machine_components.cpp
+machine_components.h
+/home/virbonus/projects/tmin/src/machine_components.h
+
+/home/virbonus/projects/tmin/src/machine_components.h
+string
+-
+
+/home/virbonus/projects/tmin/src/main.cpp
+iostream
+-
+machine_components.h
+/home/virbonus/projects/tmin/src/machine_components.h
+m_config_parse.h
+/home/virbonus/projects/tmin/src/m_config_parse.h
+
