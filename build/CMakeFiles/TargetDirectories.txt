@@ -1,3 +1,0 @@
-/home/virbonus/projects/tmin/build/CMakeFiles/rebuild_cache.dir
-/home/virbonus/projects/tmin/build/CMakeFiles/edit_cache.dir
-/home/virbonus/projects/tmin/build/CMakeFiles/tmin.dir
