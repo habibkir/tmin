@@ -4,10 +4,10 @@
 #include "m_config_parse.h"
 
 int main(){
-    //std::cout<<"hello, nothing broke!\n";
-    
-    std::cout<<"testing ifstream\n";
-    first_step("../texts/sample.txt");
-    
-    return 0;
+  //std::cout<<"hello, nothing broke!\n";
+
+  std::cout<<"testing ifstream\n";
+  first_step("../texts/here.txt");
+
+  return 0;
 }
